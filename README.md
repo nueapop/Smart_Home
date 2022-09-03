@@ -1,2 +1,4 @@
 # Smart_Home
-mini project smart home
+## License
+
+[GNU](https://github.com/nueapop/Smart_Home/blob/main/LICENSE)
