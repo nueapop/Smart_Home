@@ -20,17 +20,17 @@
 <script>
     var vConsole = new VConsole()
 
-    async function main() {
-        liff.ready.then(() => {
-            if (liff.isLoggedIn()) {
-            } else {
-                liff.login({ redirectUri: "https://nueapop.github.io/Smart_Home/web/pages" })
-            }
-        })
-        const config = getConfig();
-        await liff.init({ liffId: config.liff.id })
-    }
-    main()
+    // async function main() {
+    //     liff.ready.then(() => {
+    //         if (liff.isLoggedIn()) {
+    //         } else {
+    //             liff.login({ redirectUri: "https://nueapop.github.io/Smart_Home/web/pages" })
+    //         }
+    //     })
+    //     const config = getConfig();
+    //     await liff.init({ liffId: config.liff.id })
+    // }
+    // main()
 </script>
 
 </html>
