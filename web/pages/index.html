@@ -6,10 +6,31 @@
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
     <title>Smart Home: Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit&display=swap">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 
 <body>
 
 </body>
+
+<script src="../assets/js/script.js"></script>
+<script>
+    var vConsole = new VConsole()
+
+    async function main() {
+        liff.ready.then(() => {
+            if (liff.isLoggedIn()) {
+            } else {
+                liff.login({ redirectUri: "https://nueapop.github.io/Smart_Home/web/pages" })
+            }
+        })
+        const config = getConfig();
+        await liff.init({ liffId: config.liff.id })
+    }
+    main()
+</script>
 
 </html>
