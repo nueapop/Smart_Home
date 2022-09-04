@@ -307,12 +307,17 @@
             dataType: 'json',
             success: function (data) {
                 if (data == "0") {
+                    toastMixin.fire({
+                        icon: 'warning',
+                        title: 'LED Waiting...'
+                    });
                     ledON();
+                } else {
+                    toastMixin.fire({
+                        title: 'LED ON'
+                    });
                 }
             }
-        });
-        toastMixin.fire({
-            title: 'LED ON'
         });
     }
 
@@ -323,13 +328,17 @@
             dataType: 'json',
             success: function (data) {
                 if (data == "0") {
+                    toastMixin.fire({
+                        icon: 'warning',
+                        title: 'LED Waiting...'
+                    });
                     ledOFF();
+                } else {
+                    toastMixin.fire({
+                        title: 'LED OFF'
+                    });
                 }
             }
-        });
-        toastMixin.fire({
-            title: 'LED OFF',
-            icon: 'warning'
         });
     }
 
