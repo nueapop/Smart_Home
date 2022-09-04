@@ -36,14 +36,6 @@
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
                     <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3"
                             id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div class="input-group"><input id="key" class="bg-light form-control border-0 small"
-                                    type="text" placeholder="INSERT YOUR KEY"><button onclick="saveKey();"
-                                    class="btn btn-primary py-0" type="button"><i class="fas fa-save"></i></button>
-                            </div>
-                        </form>
-                        <h4 id="myKeyicon"></h4>
-                        <h3 id="myKey"></h3>
                     </div>
                 </nav>
                 <div class="container-fluid">
@@ -57,7 +49,7 @@
                                     class="fas fa-lightbulb fa-sm text-white-50"></i>&nbsp;OFF</button></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-xl-3 mb-4">
+                        <div class="col-md-4 col-xl-4 mb-4">
                             <div class="card shadow border-start-primary py-2">
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
@@ -73,7 +65,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
+                        <div class="col-md-4 col-xl-4 mb-4">
                             <div class="card shadow border-start-success py-2">
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
@@ -90,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
+                        <div class="col-md-4 col-xl-4 mb-4">
                             <div class="card shadow border-start-info py-2">
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
@@ -100,29 +92,14 @@
                                             </div>
                                             <div class="row g-0 align-items-center">
                                                 <div class="col-auto">
-                                                    <div id="BRIGHT_RANGE" class="text-dark fw-bold h5 mb-0 me-3">
+                                                    <div id="SMOKE" class="text-dark fw-bold h5 mb-0 me-3">
                                                         <span>None</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-auto"><i class="fas fa-traffic-light fa-2x text-gray-300"></i>
+                                        <div class="col-auto"><i class="fa fa-smoking fa-2x text-gray-300"></i>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-start-warning py-2">
-                                <div class="card-body">
-                                    <div class="row align-items-center no-gutters">
-                                        <div class="col me-2">
-                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>led
-                                                    Status</span></div>
-                                            <div id="LED_STATUS" class="text-dark fw-bold h5 mb-0"><span>None</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto"><i class="fas fa-plug fa-2x text-gray-300"></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -211,6 +188,39 @@
 <script src="../assets/js/script.js"></script>
 <script>
     var vConsole = new VConsole()
+
+    var toastMixin = Swal.mixin({
+        toast: true,
+        icon: 'success',
+        position: 'top-right',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+
+    function getData() {
+        $.ajax({
+            type: 'GET',
+            url: 'https://api.thingspeak.com/channels/1848263/feeds.json?results=1',
+            dataType: 'json',
+            success: function (data) {
+                $('#SMOKE').html(data.feeds[0].field4);
+                $('#DHT_TEMP').html(parseFloat(data.feeds[0].field2).toFixed(2));
+                $('#DHT_HUMIDITY').html(parseFloat(data.feeds[0].field3).toFixed(2));
+                var date = new Date(data.feeds[0].created_at);
+                $('#Date').html(date.toString());
+                setTimeout(function () { getData(); }, 1000);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        getData();
+    });
 
     // async function main() {
     //     liff.ready.then(() => {
