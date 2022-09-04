@@ -269,14 +269,13 @@
 <script src="../assets/js/dashboard.js"></script>
 <script src="../assets/js/script.js"></script>
 <script>
-    var vConsole = new VConsole()
-
+    var vConsole = new VConsole();
+    var alertStatus = 0;
     var toastMixin = Swal.mixin({
         toast: true,
         icon: 'success',
         position: 'top-right',
         showConfirmButton: false,
-        timer: 2000,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -307,14 +306,18 @@
             dataType: 'json',
             success: function (data) {
                 if (data == "0") {
-                    toastMixin.fire({
-                        icon: 'warning',
-                        title: 'LED Waiting...'
-                    });
+                    if (alertStatus == 0) {
+                        toastMixin.fire({
+                            icon: 'warning',
+                            title: 'LED Waiting...'
+                        });
+                        alertStatus = 1;
+                    }
                     ledON();
                 } else {
                     toastMixin.fire({
-                        title: 'LED ON'
+                        title: 'LED ON',
+                        timer: 2000
                     });
                 }
             }
@@ -328,14 +331,18 @@
             dataType: 'json',
             success: function (data) {
                 if (data == "0") {
-                    toastMixin.fire({
-                        icon: 'warning',
-                        title: 'LED Waiting...'
-                    });
+                    if (alertStatus == 0) {
+                        toastMixin.fire({
+                            icon: 'warning',
+                            title: 'LED Waiting...'
+                        });
+                        alertStatus = 1;
+                    }
                     ledOFF();
                 } else {
                     toastMixin.fire({
-                        title: 'LED OFF'
+                        title: 'LED OFF',
+                        timer: 2000
                     });
                 }
             }
