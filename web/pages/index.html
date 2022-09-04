@@ -41,14 +41,96 @@
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
                         <h3 id="Date" class="text-dark mb-0">None</h3>
-                        <div class="btn-group" role="group"><button onclick="ledON();" class="btn btn-primary"
-                                type="button"><i
-                                    class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button><button
-                                onclick="ledOFF();" class="btn btn-primary" type="button"
-                                style="background: var(--bs-danger);"><i
-                                    class="fas fa-lightbulb fa-sm text-white-50"></i>&nbsp;OFF</button></div>
                     </div>
                     <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0">SWITCH MODE</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <div class="card shadow border-start-primary py-2">
+                                            <div class="card-body">
+                                                <div class="row align-items-center no-gutters">
+                                                    <div class="col me-2">
+                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                            <span>temperature</span>
+                                                        </div>
+                                                        <div class="text-dark fw-bold h5 mb-0">
+                                                            <span>None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="btn-group" role="group"><button onclick="ledON();"
+                                                                class="btn btn-primary" type="button"><i
+                                                                    class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button><button
+                                                                onclick="ledOFF();" class="btn btn-primary"
+                                                                type="button" style="background: var(--bs-danger);"><i
+                                                                    class="fas fa-lightbulb fa-sm text-white-50"></i>&nbsp;OFF</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <div class="card shadow border-start-success py-2">
+                                            <div class="card-body">
+                                                <div class="row align-items-center no-gutters">
+                                                    <div class="col me-2">
+                                                        <div class="text-uppercase text-success fw-bold text-xs mb-1">
+                                                            <span>humidity</span>
+                                                        </div>
+                                                        <div class="text-dark fw-bold h5 mb-0">
+                                                            <span>None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="btn-group" role="group"><button onclick="ledON();"
+                                                                class="btn btn-primary" type="button"><i
+                                                                    class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button><button
+                                                                onclick="ledOFF();" class="btn btn-primary"
+                                                                type="button" style="background: var(--bs-danger);"><i
+                                                                    class="fas fa-lightbulb fa-sm text-white-50"></i>&nbsp;OFF</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <div class="card shadow border-start-info py-2">
+                                            <div class="card-body">
+                                                <div class="row align-items-center no-gutters">
+                                                    <div class="col me-2">
+                                                        <div class="text-uppercase text-info fw-bold text-xs mb-1">
+                                                            <span>smoke</span>
+                                                        </div>
+                                                        <div class="row g-0 align-items-center">
+                                                            <div class="col-auto">
+                                                                <div class="text-dark fw-bold h5 mb-0 me-3">
+                                                                    <span>None</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="btn-group" role="group"><button onclick="ledON();"
+                                                                class="btn btn-primary" type="button"><i
+                                                                    class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button><button
+                                                                onclick="ledOFF();" class="btn btn-primary"
+                                                                type="button" style="background: var(--bs-danger);"><i
+                                                                    class="fas fa-lightbulb fa-sm text-white-50"></i>&nbsp;OFF</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-4 col-xl-4 mb-4">
                             <div class="card shadow border-start-primary py-2">
                                 <div class="card-body">
@@ -224,6 +306,7 @@
             url: 'https://api.thingspeak.com/update?api_key=LH7K1MEFCPZSWTG6&field1=1&field2=1&field3=1&field4=1&field5=1&field6=1&field7=1&field8=1',
             dataType: 'json',
             success: function (data) {
+                console.log(data);
             }
         });
         toastMixin.fire({
@@ -237,6 +320,7 @@
             url: 'https://api.thingspeak.com/update?api_key=LH7K1MEFCPZSWTG6&field1=0&field2=0&field3=0&field4=0&field5=0&field6=0&field7=0&field8=0',
             dataType: 'json',
             success: function (data) {
+                console.log(data);
             }
         });
         toastMixin.fire({
