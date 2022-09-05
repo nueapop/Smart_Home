@@ -111,6 +111,11 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-auto">
+                                                        <div class="btn-group" role="group"><button
+                                                                onclick="ledStatusP2ON();" class="btn btn-primary"
+                                                                type="button"><i
+                                                                    class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -710,6 +715,91 @@
         document.getElementById('switch12').style.display = 'block';
         toastMixin.fire({
             title: 'LED Party 1 OFF',
+            timer: 2000
+        });
+    }
+
+    function ledStatusP2ON() {
+        document.getElementById('switch1').style.display = 'none';
+        document.getElementById('switch2').style.display = 'none';
+        document.getElementById('switch3').style.display = 'none';
+        document.getElementById('switch4').style.display = 'none';
+        document.getElementById('switch5').style.display = 'none';
+        document.getElementById('switch6').style.display = 'none';
+        document.getElementById('switch7').style.display = 'none';
+        document.getElementById('switch8').style.display = 'none';
+        document.getElementById('switch9').style.display = 'none';
+        document.getElementById('switch10').style.display = 'none';
+        document.getElementById('switch11').style.display = 'none';
+        document.getElementById('switch12').style.display = 'none';
+        if (document.getElementById("fenceText").textContent == "ON") {
+            $.ajax({
+                type: 'GET',
+                url: 'https://api.thingspeak.com/update?api_key=SAO78WRQE8QGIO2H&field1=1&field2=' + document.getElementById("DHT_TEMP").textContent + '&field3=' + document.getElementById("DHT_HUMIDITY").textContent + '&field4=' + document.getElementById("SMOKE").textContent + '&field5=0&field6=1',
+                dataType: 'json',
+                success: function (data) {
+                    if (data == "0") {
+                        if (alertStatus == 0) {
+                            toastMixin.fire({
+                                icon: 'warning',
+                                title: 'LED Party 2 Waiting...'
+                            });
+                            alertStatus = 1;
+                        }
+                        ledStatusP2ON();
+                    } else {
+                        toastMixin.fire({
+                            title: 'LED Party 2 ON',
+                            timer: 2000
+                        });
+                        alertStatus = 0;
+                        setTimeout(function () { ledStatusP2OFF(); }, 20000);
+                    }
+                }
+            });
+        } else {
+            $.ajax({
+                type: 'GET',
+                url: 'https://api.thingspeak.com/update?api_key=SAO78WRQE8QGIO2H&field1=0&field2=' + document.getElementById("DHT_TEMP").textContent + '&field3=' + document.getElementById("DHT_HUMIDITY").textContent + '&field4=' + document.getElementById("SMOKE").textContent + '&field5=0&field6=1',
+                dataType: 'json',
+                success: function (data) {
+                    if (data == "0") {
+                        if (alertStatus == 0) {
+                            toastMixin.fire({
+                                icon: 'warning',
+                                title: 'LED Party 2 Waiting...'
+                            });
+                            alertStatus = 1;
+                        }
+                        ledStatusP2ON();
+                    } else {
+                        toastMixin.fire({
+                            title: 'LED Party 2 ON',
+                            timer: 2000
+                        });
+                        alertStatus = 0;
+                        setTimeout(function () { ledStatusP2OFF(); }, 20000);
+                    }
+                }
+            });
+        }
+    }
+
+    function ledStatusP2OFF() {
+        document.getElementById('switch1').style.display = 'block';
+        document.getElementById('switch2').style.display = 'block';
+        document.getElementById('switch3').style.display = 'block';
+        document.getElementById('switch4').style.display = 'block';
+        document.getElementById('switch5').style.display = 'block';
+        document.getElementById('switch6').style.display = 'block';
+        document.getElementById('switch7').style.display = 'block';
+        document.getElementById('switch8').style.display = 'block';
+        document.getElementById('switch9').style.display = 'block';
+        document.getElementById('switch10').style.display = 'block';
+        document.getElementById('switch11').style.display = 'block';
+        document.getElementById('switch12').style.display = 'block';
+        toastMixin.fire({
+            title: 'LED Party 2 OFF',
             timer: 2000
         });
     }
