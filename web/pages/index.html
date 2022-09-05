@@ -1530,7 +1530,7 @@
     async function getUserProfile() {
         const profile = await liff.getProfile()
         document.getElementById("profile-image").src = profile.pictureUrl
-        document.getElementById("profile-name").html('&nbsp;&nbsp;' + profile.displayName)
+        document.getElementById("profile-name").append('&nbsp;&nbsp;' + profile.displayName)
     }
 
     google.charts.load('current', { 'packages': ['corechart'] });
