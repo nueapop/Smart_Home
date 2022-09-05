@@ -500,23 +500,14 @@
             url: 'https://api.thingspeak.com/channels/1848263/feeds.json?results=1',
             dataType: 'json',
             success: function (data) {
-                if (data.feeds[0].field1 == 1) {
-                    $('#ledStatus9').html('<span id="fenceText" class="text-success">ON</span>');
-                    ledStatusStack += 1;
-                } else {
-                    $('#ledStatus9').html('<span id="fenceText" class="text-danger">OFF</span>');
-                }
                 $('#SMOKE').html(data.feeds[0].field4);
                 $('#DHT_TEMP').html(parseFloat(data.feeds[0].field2).toFixed(2));
                 $('#DHT_HUMIDITY').html(parseFloat(data.feeds[0].field3).toFixed(2));
                 var date = new Date(data.feeds[0].created_at);
                 $('#Date').html(date.toString());
-                if (ledStatusStack == 9) {
-                    $('#ledStatusAll').html('<span class="text-success">ON</span>');
-                } else {
-                    $('#ledStatusAll').html('<span class="text-danger">OFF</span>');
-                }
-                if (document.getElementById("fenceText").textContent == "ON") {
+                if (data.feeds[0].field1 == 1) {
+                    $('#ledStatus9').html('<span id="fenceText" class="text-success">ON</span>');
+                    ledStatusStack += 1;
                     $.ajax({
                         type: 'GET',
                         url: 'https://api.thingspeak.com/update?api_key=SAO78WRQE8QGIO2H&field1=1&field2=' + document.getElementById("DHT_TEMP").textContent + '&field3=' + document.getElementById("DHT_HUMIDITY").textContent + '&field4=' + document.getElementById("SMOKE").textContent + '&field5=0&field6=0',
@@ -524,12 +515,18 @@
                         success: function (data) { }
                     });
                 } else {
+                    $('#ledStatus9').html('<span id="fenceText" class="text-danger">OFF</span>');
                     $.ajax({
                         type: 'GET',
                         url: 'https://api.thingspeak.com/update?api_key=SAO78WRQE8QGIO2H&field1=0&field2=' + document.getElementById("DHT_TEMP").textContent + '&field3=' + document.getElementById("DHT_HUMIDITY").textContent + '&field4=' + document.getElementById("SMOKE").textContent + '&field5=0&field6=0',
                         dataType: 'json',
                         success: function (data) { }
                     });
+                }
+                if (ledStatusStack == 9) {
+                    $('#ledStatusAll').html('<span class="text-success">ON</span>');
+                } else {
+                    $('#ledStatusAll').html('<span class="text-danger">OFF</span>');
                 }
             }
         });
