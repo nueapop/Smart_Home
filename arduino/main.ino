@@ -22,8 +22,8 @@ DHT dht(DHTPIN, DHTTYPE);
 int sendDelay = 6000;
 const char *writeAPIKEY1 = "LH7K1MEFCPZSWTG6";
 const char *writeAPIKEY2 = "SAO78WRQE8QGIO2H";
-const char *ssid = "Film";
-const char *password = "21012546";
+const char *ssid = "IoTAD01";
+const char *password = "ccsadmin";
 unsigned long myChannelNumber1 = 1845410;
 unsigned long myChannelNumber2 = 1848263;
 WiFiClient client;
@@ -75,7 +75,7 @@ void setup()
 
 void loop()
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 2; i++)
     {
         delay(sendDelay);
         Serial.println("Reading data to ThingSpeak...");
