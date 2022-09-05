@@ -112,7 +112,7 @@ void Cliend_send2()
     ThingSpeak.setField(1, digitalRead(ledFencePin));
     ThingSpeak.setField(2, dht.readTemperature());
     ThingSpeak.setField(3, dht.readHumidity());
-    ThingSpeak.setField(4, analogRead(MQ2));
+    ThingSpeak.setField(4, map(analogRead(MQ2), 0, 1023, 0, 100));
     ThingSpeak.setField(5, partyMode);
     ThingSpeak.setField(6, partyMode2);
 
