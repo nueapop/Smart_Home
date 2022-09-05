@@ -49,235 +49,256 @@
                                     <h6 class="text-primary fw-bold m-0">SWITCH MODE</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div id="switch1" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: All</span>
+                                    <div class="row">
+                                        <div id="switch1" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: All</span>
+                                                            </div>
+                                                            <div id="ledStatusAll" class="text-dark fw-bold h5 mb-0">
+                                                                <span>None</span>
+                                                            </div>
                                                         </div>
-                                                        <div id="ledStatusAll" class="text-dark fw-bold h5 mb-0">
-                                                            <span>None</span>
+                                                        <div class="col-auto">
+                                                            <div class="btn-group" role="group"><button
+                                                                    onclick="ledStatusAllON();" class="btn btn-primary"
+                                                                    type="button"><i
+                                                                        class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button><button
+                                                                    onclick="ledStatusAllOFF();" class="btn btn-primary"
+                                                                    type="button"
+                                                                    style="background: var(--bs-danger);"><i
+                                                                        class="fas fa-lightbulb fa-sm text-white-50"></i>&nbsp;OFF</button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-auto">
-                                                        <div class="btn-group" role="group"><button
-                                                                onclick="ledStatusAllON();" class="btn btn-primary"
-                                                                type="button"><i
-                                                                    class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button><button
-                                                                onclick="ledStatusAllOFF();" class="btn btn-primary"
-                                                                type="button" style="background: var(--bs-danger);"><i
-                                                                    class="fas fa-lightbulb fa-sm text-white-50"></i>&nbsp;OFF</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="switch2" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: PartyMode 1</span>
+                                                            </div>
+                                                            <div id="ledStatusParty1"
+                                                                class="text-warning fw-bold h5 mb-0">
+                                                                <span>Spacial</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="btn-group" role="group"><button
+                                                                    onclick="ledStatusP1ON();" class="btn btn-primary"
+                                                                    type="button"><i
+                                                                        class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="switch3" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: PartyMode 2</span>
+                                                            </div>
+                                                            <div id="ledStatusParty2"
+                                                                class="text-warning fw-bold h5 mb-0">
+                                                                <span>Spacial</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="btn-group" role="group"><button
+                                                                    onclick="ledStatusP2ON();" class="btn btn-primary"
+                                                                    type="button"><i
+                                                                        class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="switch4" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: Led 1</span>
+                                                            </div>
+                                                            <div id="ledStatus1" class="text-dark fw-bold h5 mb-0">
+                                                                <span>None</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="switch2" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: PartyMode 1</span>
+                                    <div class="row">
+                                        <div id="switch5" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: Led 2</span>
+                                                            </div>
+                                                            <div id="ledStatus2" class="text-dark fw-bold h5 mb-0">
+                                                                <span>None</span>
+                                                            </div>
                                                         </div>
-                                                        <div id="ledStatusParty1" class="text-warning fw-bold h5 mb-0">
-                                                            <span>Spacial</span>
+                                                        <div class="col-auto">
                                                         </div>
                                                     </div>
-                                                    <div class="col-auto">
-                                                        <div class="btn-group" role="group"><button
-                                                                onclick="ledStatusP1ON();" class="btn btn-primary"
-                                                                type="button"><i
-                                                                    class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="switch6" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: Led 3</span>
+                                                            </div>
+                                                            <div id="ledStatus3" class="text-dark fw-bold h5 mb-0">
+                                                                <span>None</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="switch7" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: Led 4</span>
+                                                            </div>
+                                                            <div id="ledStatus4" class="text-dark fw-bold h5 mb-0">
+                                                                <span>None</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="switch8" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: Led 5</span>
+                                                            </div>
+                                                            <div id="ledStatus5" class="text-dark fw-bold h5 mb-0">
+                                                                <span>None</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="switch3" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: PartyMode 2</span>
+                                    <div class="row">
+                                        <div id="switch9" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: Led 6</span>
+                                                            </div>
+                                                            <div id="ledStatus6" class="text-dark fw-bold h5 mb-0">
+                                                                <span>None</span>
+                                                            </div>
                                                         </div>
-                                                        <div id="ledStatusParty2" class="text-warning fw-bold h5 mb-0">
-                                                            <span>Spacial</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <div class="btn-group" role="group"><button
-                                                                onclick="ledStatusP2ON();" class="btn btn-primary"
-                                                                type="button"><i
-                                                                    class="far fa-lightbulb fa-sm text-white-50"></i>&nbsp;ON</button>
+                                                        <div class="col-auto">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div id="switch4" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: Led 1</span>
+                                        <div id="switch10" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: Led 7</span>
+                                                            </div>
+                                                            <div id="ledStatus7" class="text-dark fw-bold h5 mb-0">
+                                                                <span>None</span>
+                                                            </div>
                                                         </div>
-                                                        <div id="ledStatus1" class="text-dark fw-bold h5 mb-0">
-                                                            <span>None</span>
+                                                        <div class="col-auto">
                                                         </div>
-                                                    </div>
-                                                    <div class="col-auto">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div id="switch5" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: Led 2</span>
+                                        <div id="switch11" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: Led 8</span>
+                                                            </div>
+                                                            <div id="ledStatus8" class="text-dark fw-bold h5 mb-0">
+                                                                <span>None</span>
+                                                            </div>
                                                         </div>
-                                                        <div id="ledStatus2" class="text-dark fw-bold h5 mb-0">
-                                                            <span>None</span>
+                                                        <div class="col-auto">
                                                         </div>
-                                                    </div>
-                                                    <div class="col-auto">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div id="switch6" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: Led 3</span>
+                                        <div id="switch12" class="col-md-3 col-xl-3 mb-3">
+                                            <div class="card shadow border-start-primary py-2">
+                                                <div class="card-body">
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col me-2">
+                                                            <div
+                                                                class="text-uppercase text-primary fw-bold text-xs mb-1">
+                                                                <span>LED: Fence</span>
+                                                            </div>
+                                                            <div id="ledStatus9" class="text-dark fw-bold h5 mb-0">
+                                                                <span id="fenceText">None</span>
+                                                            </div>
                                                         </div>
-                                                        <div id="ledStatus3" class="text-dark fw-bold h5 mb-0">
-                                                            <span>None</span>
+                                                        <div class="col-auto">
                                                         </div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="switch7" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: Led 4</span>
-                                                        </div>
-                                                        <div id="ledStatus4" class="text-dark fw-bold h5 mb-0">
-                                                            <span>None</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="switch8" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: Led 5</span>
-                                                        </div>
-                                                        <div id="ledStatus5" class="text-dark fw-bold h5 mb-0">
-                                                            <span>None</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="switch9" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: Led 6</span>
-                                                        </div>
-                                                        <div id="ledStatus6" class="text-dark fw-bold h5 mb-0">
-                                                            <span>None</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="switch10" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: Led 7</span>
-                                                        </div>
-                                                        <div id="ledStatus7" class="text-dark fw-bold h5 mb-0">
-                                                            <span>None</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="switch11" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: Led 8</span>
-                                                        </div>
-                                                        <div id="ledStatus8" class="text-dark fw-bold h5 mb-0">
-                                                            <span>None</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="switch12" class="mb-2">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1">
-                                                            <span>LED: Fence</span>
-                                                        </div>
-                                                        <div id="ledStatus9" class="text-dark fw-bold h5 mb-0">
-                                                            <span id="fenceText">None</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-auto">
                                                     </div>
                                                 </div>
                                             </div>
@@ -294,7 +315,8 @@
                                             <div class="text-uppercase text-primary fw-bold text-xs mb-1">
                                                 <span>temperature</span>
                                             </div>
-                                            <div id="DHT_TEMP" class="text-dark fw-bold h5 mb-0"><span>None</span></div>
+                                            <div id="DHT_TEMP" class="text-dark fw-bold h5 mb-0"><span>None</span>
+                                            </div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-temperature-low fa-2x text-gray-300"></i>
                                         </div>
@@ -310,7 +332,8 @@
                                             <div class="text-uppercase text-success fw-bold text-xs mb-1">
                                                 <span>humidity</span>
                                             </div>
-                                            <div id="DHT_HUMIDITY" class="text-dark fw-bold h5 mb-0"><span>None</span>
+                                            <div id="DHT_HUMIDITY" class="text-dark fw-bold h5 mb-0">
+                                                <span>None</span>
                                             </div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-person-booth fa-2x text-gray-300"></i>
