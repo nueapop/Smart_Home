@@ -605,9 +605,9 @@
             url: 'https://api.thingspeak.com/channels/1848263/feeds.json?results=1',
             dataType: 'json',
             success: function (data) {
-                $('#SMOKE').html(data.feeds[0].field4 + ' %');
-                $('#DHT_TEMP').html(parseFloat(data.feeds[0].field2).toFixed(2) + ' °C');
-                $('#DHT_HUMIDITY').html(parseFloat(data.feeds[0].field3).toFixed(2) + ' %');
+                $('#SMOKE').html(data.feeds[0].field4);
+                $('#DHT_TEMP').html(parseFloat(data.feeds[0].field2).toFixed(2));
+                $('#DHT_HUMIDITY').html(parseFloat(data.feeds[0].field3).toFixed(2));
                 var date = new Date(data.feeds[0].created_at);
                 $('#Date').html(date.toString());
                 if (data.feeds[0].field1 == 1) {
@@ -770,6 +770,12 @@
                             timer: 2000
                         });
                         alertStatus = 0;
+                        setTimeout(function () {
+                            toastMixin.fire({
+                                icon: 'warning',
+                                title: 'Party Mode inprogress...'
+                            });
+                        }, 2000);
                         setTimeout(function () { ledStatusP1OFF(); }, 20000);
                     }
                 }
@@ -795,6 +801,12 @@
                             timer: 2000
                         });
                         alertStatus = 0;
+                        setTimeout(function () {
+                            toastMixin.fire({
+                                icon: 'warning',
+                                title: 'Party Mode inprogress...'
+                            });
+                        }, 2000);
                         setTimeout(function () { ledStatusP1OFF(); }, 20000);
                     }
                 }
@@ -855,6 +867,12 @@
                             timer: 2000
                         });
                         alertStatus = 0;
+                        setTimeout(function () {
+                            toastMixin.fire({
+                                icon: 'warning',
+                                title: 'Party Mode inprogress...'
+                            });
+                        }, 2000);
                         setTimeout(function () { ledStatusP2OFF(); }, 20000);
                     }
                 }
@@ -880,6 +898,12 @@
                             timer: 2000
                         });
                         alertStatus = 0;
+                        setTimeout(function () {
+                            toastMixin.fire({
+                                icon: 'warning',
+                                title: 'Party Mode inprogress...'
+                            });
+                        }, 2000);
                         setTimeout(function () { ledStatusP2OFF(); }, 20000);
                     }
                 }
