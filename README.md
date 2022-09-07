@@ -4,7 +4,7 @@
     ให้ผู้ใช้งานสามารถควบคุมการทำงานของอุปกรณ์ต่างๆ ในบ้านได้อย่างง่ายดาย และสามารถประหยัดพลังงานได้
 
 ## Model of Smart Home
-![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/room.jpg)
+![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/banner.png)
 
 ## Features
 - สามารถควบคุมการทำงานของอุปกรณ์ต่างๆ ในบ้านได้ผ่าน Web Application
@@ -25,7 +25,12 @@
     <> ใช้แทนหลอดไฟภายในบ้าน
 - Resistor ( 11 Pc. )
     <> ใช้ในการป้องกันการเกิดการกระแสไฟฟ้าที่มากเกินไป
-    
+
+## Embedded Library
+- DHT11.h <> ใช้ในการตรวจจับความชื้นและอุณหภูมิภายในบ้าน
+- WiFi.h <> ใช้ในการเชื่อมต่อ NodeMCU ESP32 กับ WiFi เพื่อให้กลายเป็นอุปกรณ์ IoT
+- ThingSpeak.h <> ใช้ในการส่งข้อมูลจาก NodeMCU ESP32 ไปยัง ThingSpeak
+
 ## License
 
 [GNU](https://github.com/nueapop/Smart_Home/blob/main/LICENSE)
