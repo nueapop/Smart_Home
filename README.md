@@ -9,6 +9,7 @@
 - สามารถตรวจจับการเปลี่ยนแปลงของสภาพแวดล้อมได้
 - สามารถประหยัดพลังงานได้
 - สามารถตรวจจับการเกิดออัคคีภัยได้
+
 ![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/room.jpg)
 
 ## Embedded Component
