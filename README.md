@@ -12,6 +12,9 @@
 
 ![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/room.jpg)
 
+## Architecture
+![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/architecture.jpg)
+
 ## Embedded Component
 - NodeMCU ESP32 ( 1 Pc. )
     <> ใช้ในการรับส่งข้อมูลจากเซนเซอร์ต่างๆ และควบคุมการทำงานของอุปกรณ์ต่างๆภายในบ้าน
