@@ -13,7 +13,9 @@
 ![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/room.jpg)
 
 ## Architecture
-![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/architecture.jpg)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/architecture.jpg" alt="Smart_Home"/>
+</p>
 
 ## Embedded Component
 - NodeMCU ESP32 ( 1 Pc. )
