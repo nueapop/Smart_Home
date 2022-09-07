@@ -31,6 +31,8 @@
 - WiFi.h <> ใช้ในการเชื่อมต่อ NodeMCU ESP32 กับ WiFi เพื่อให้กลายเป็นอุปกรณ์ IoT
 - ThingSpeak.h <> ใช้ในการส่งข้อมูลจาก NodeMCU ESP32 ไปยัง ThingSpeak
 
+![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/embedded.HEIC)
+
 ## License
 
 [GNU](https://github.com/nueapop/Smart_Home/blob/main/LICENSE)
