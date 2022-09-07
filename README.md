@@ -38,6 +38,12 @@
 - Line LIFF <> ใช้ในการเชื่อมต่อกับ Web Application และ Integrate กับ Line Login API
 - ThingSpeak <> ใช้ในการรับข้อมูลจาก NodeMCU ESP32 และส่งข้อมูลไปแสดงผลบน Web Application
 - Dashboard <> ใช้ในการแสดงผลข้อมูลจาก NodeMCU ESP32 และสามารถควบคุมการทำงานของอุปกรณ์ต่างๆภายในบ้านได้
+
+![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/webOnload.png)
+![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/webLogin.png)
+![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/webDashboard1.png)
+![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/webDashboard2.png)
+
 ## License
 
 [GNU](https://github.com/nueapop/Smart_Home/blob/main/LICENSE)
