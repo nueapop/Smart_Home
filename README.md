@@ -49,6 +49,11 @@
 ![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/webDashboard1.png)
 ![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/webDashboard2.png)
 
+## Video Presentation
+- N/A
+
+<p align="center">Information Technology and Digital Innovation<br>Walailak University</p>
+
 ## License
 
 [GNU](https://github.com/nueapop/Smart_Home/blob/main/LICENSE)
