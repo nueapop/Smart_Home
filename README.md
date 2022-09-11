@@ -38,6 +38,9 @@
 
 ![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/embedded.png)
 
+## Wire Circuit
+![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/wire.png)
+
 ## Web Application Function
 - Line OA <> Official Account สำหรับการแจ้งเตือน และ ใช้งาน Feature Line LIFF
 - Line LIFF <> ใช้ในการเชื่อมต่อกับ Web Application และ Integrate กับ Line Login API
@@ -50,7 +53,11 @@
 ![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/webDashboard2.png)
 
 ## Video Presentation
-- N/A
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/0JP2ZqZhrDc" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 <p align="center">Information Technology and Digital Innovation<br>Walailak University</p>
 
