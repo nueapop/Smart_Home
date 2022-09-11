@@ -55,7 +55,7 @@
 ## Video Presentation
 [![Video Presentation](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/youtube.png)](https://www.youtube.com/watch?v=0JP2ZqZhrDc)
 
-<p align="center">Information Technology and Digital Innovation<br>Walailak University</p>
+<p align="center"><br>63111934 นายเหนือภพ<br>63104079 นายธนบดี<br>63104509 นายธันยบูรณ์<br>63104020  นายธนโชติ<br><br>Information Technology and Digital Innovation<br>Walailak University</p>
 
 ## License
 
