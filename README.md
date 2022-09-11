@@ -53,11 +53,7 @@
 ![Smart_Home](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/webDashboard2.png)
 
 ## Video Presentation
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/0JP2ZqZhrDc" 
-frameborder="0" 
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
+[![Video Presentation](https://raw.githubusercontent.com/nueapop/Smart_Home/main/web/assets/image/youtube.png)](https://www.youtube.com/watch?v=0JP2ZqZhrDc)
 
 <p align="center">Information Technology and Digital Innovation<br>Walailak University</p>
 
